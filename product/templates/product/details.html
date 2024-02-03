@@ -1,0 +1,35 @@
+
+
+
+{% load static%}
+
+{% block content %}
+      <h1> Products</h1>
+   
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                     </br>
+                    <td>{{product.id}}</td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td>{{product.name}}</td>
+                </tr>
+                <tr>
+                    <th>details</th>
+                    <td>{{product.details}}</td>
+                </tr>
+             
+            </thead>
+                
+    
+        </table>
+    </div>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,52 @@
+
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}
+      product 
+        {% endblock %}
+{% block content %}
+      <h1> Products</h1>
+     
+     <a href="{%url 'addproduct' %}">New Product</a>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    {% comment %} <th>Details</th> {% endcomment %}
+                    <th>details</th>
+                    
+                    <th>actions</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product.id }}</td>
+                
+                    <td>{{ product.name }}</td>
+                 
+                    <td>{{ product.details }}</td>
+                    
+                    <td>
+                       
+                       
+                     
+                     <a href="{%url 'product.details' product.id%}">details</a> 
+                    </br>
+                     <a href="">update</a> 
+                     </br>
+                     <a href="{%url 'product.delete' product.id%}">delete</a> 
+                     </br>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
+
+

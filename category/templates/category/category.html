@@ -1,0 +1,54 @@
+
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}
+      category
+        {% endblock %}
+{% block content %}
+      <h1> Categories</h1>
+     
+     <a href="{%url 'addcategory' %}">New category</a>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                
+                    <th>details</th>
+                    <th>number of products</th>
+                    <th>image</th>
+                    <th>actions</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for category in categories %}
+                <tr>
+                    <td>{{ category.id }}</td>
+                
+                    <td>{{ category.name }}</td>
+                 
+                    <td>{{ category.details }}</td>
+                    <td>{{ category.numberproducts }}</td>
+                    <td>{{ category.image }}</td>
+                    <td>
+                       
+                       
+                     
+                     <a href="{%url 'category.details' category.id%}">details</a> 
+                    </br>
+                     <a href="">update</a> 
+                     </br>
+                     <a href="{%url 'category.delete' category.id%}">delete</a> 
+                     </br>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,39 @@
+
+
+
+{% load static%}
+
+{% block content %}
+      <h1> categories</h1>
+   
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                     </br>
+                    <td>{{category.id}}</td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td>{{category.name}}</td>
+                </tr>
+                <tr>
+                    <th>details</th>
+                    <td>{{category.details}}</td>
+                </tr>
+                <tr>
+                    <th>number of products</th>
+                    <td>{{category.numberproducts}}</td>
+                </tr>
+             
+            </thead>
+                
+    
+        </table>
+    </div>
+
+
+{% endblock %}
+
+
