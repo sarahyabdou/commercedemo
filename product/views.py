@@ -17,7 +17,7 @@ def product_view(request):
 def productdetails(request,id):
       obj1= Product.objects.get(id=id)
       context={'product':obj1}
-      return render(request,'details.html',context)
+      return render(request,'product/details.html',context)
   
 
 

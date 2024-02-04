@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
+    <title>Category Details</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Link to your CSS file -->
 </head>
 <body>
 
 {% block content %}
-    <h1>Product Details</h1>
+    <h1>Category Details</h1>
    
     <div class="table-responsive">
         <table class="table">
@@ -19,15 +19,15 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Details</th>
-                    
+                    <th>Number of Products</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ product.id }}</td>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.details }}</td>
-                  
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.name }}</td>
+                    <td>{{ category.details }}</td>
+                    <td>{{ category.numberproducts }}</td>
                 </tr>
             </tbody>
         </table>

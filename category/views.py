@@ -13,7 +13,7 @@ def category_view(request):
 def categorydetails(request,id):
       obj1= Category.objects.get(id=id)
       context={'category':obj1}
-      return render(request,'details.html',context)
+      return render(request,'detailss.html',context)
 
 def addcategory(request):
     if (request.method=='POST'):
