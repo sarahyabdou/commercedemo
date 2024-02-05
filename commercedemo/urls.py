@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from product import views
-
+from .settings import *
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', views.home),
@@ -28,4 +29,18 @@ urlpatterns = [
        path('about/',include('about.url')),
        
     
-]
+]+static(MEDIA_URL,document_root=MEDIA_ROOT)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

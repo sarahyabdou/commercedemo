@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static%}
+{%block title%}
+Update product
+{%endblock%}
+
+{% block content %}
+<h3>
+    Update new product
+</h3>
+<form method="post">
+     {% csrf_token %}
+    
+    <label>Name:</label>
+    <input type="text" name="tname" value={{product.name}}>
+     </br>
+  
+    <label>Details:</label>
+    <input type="text" name="tdetails" value={{product.details}}>
+    
+     </br>
+    
+     
+     <input type="submit" value="update">
+     </br>
+</form>
+<div style="color:red">
+    {{msg}}
+</div>
+{%endblock%}

@@ -7,15 +7,20 @@
 {% block content %}
       <h1> Products</h1>
      
-     <a href="{%url 'addproduct' %}">New Product</a>
+     {% comment %} <a href="{%url 'addproduct' %}">New Product</a> {% endcomment %}
+     <button>
+     <a href="{%url 'addformproduct' %}">Add new product </a>
+     </button>
     <div class="table-responsive">
         <table class="table">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    {% comment %} <th>Details</th> {% endcomment %}
+                 
                     <th>details</th>
+                    <th width="40%">Image</th>
+                    
                     
                     <th>actions</th>
                     
@@ -29,17 +34,31 @@
                     <td>{{ product.name }}</td>
                  
                     <td>{{ product.details }}</td>
+                    <td>
+                        <img  width="25%"src="{{product.getpimageurl}}"/>
+                    </td>
+                   
+                    
                     
                     <td>
                        
                        
-                     
+                     <button>
                      <a href="{%url 'product.details' product.id%}">details</a> 
-                    </br>
-                     <a href="">update</a> 
-                     </br>
+                     </button>
+                   
+                    
+                    <button>
+                     <a href="{%url 'product.update' product.id%}">update</a> 
+                    </button>
+                    
+
+                     <button style="color:blue">
+
                      <a href="{%url 'product.delete' product.id%}">delete</a> 
+                     </button>
                      </br>
+                    </td>
                     
                 </tr>
                 {% endfor %}

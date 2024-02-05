@@ -1,16 +1,14 @@
+{% extends 'base.html' %}
 {% load static%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category Details</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Link to your CSS file -->
-</head>
-<body>
+{% block title %}
+      details for  category
+{% endblock %}
 
 {% block content %}
-    <h1>Category Details</h1>
+
+
+
+    <h3>Category Details</h3>
    
     <div class="table-responsive">
         <table class="table">
@@ -20,6 +18,10 @@
                     <th>Name</th>
                     <th>Details</th>
                     <th>Number of Products</th>
+                    <th></th>
+                    <th></th><th></th>
+                    <th>Image</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -27,12 +29,19 @@
                     <td>{{ category.id }}</td>
                     <td>{{ category.name }}</td>
                     <td>{{ category.details }}</td>
+                     
                     <td>{{ category.numberproducts }}</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td>
+                        <img  width="20%"src="{{category.getimageurl}}"/>
+                    </td>
+
                 </tr>
             </tbody>
         </table>
     </div>
 {% endblock %}
 
-</body>
-</html>
+

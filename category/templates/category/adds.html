@@ -1,0 +1,28 @@
+{% comment %} 
+{% load static%}
+<h1>
+    Add new category
+</h1>
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+    
+    <label>Name:</label>
+    <input type="text" name="tname">
+     </br>
+  
+    <label>Details:</label>
+    <input type="text" name="tdetails">
+     </br>
+    <label>Number of products:</label>
+    <input type="number" name="tnum">
+    </br>
+    <label>Image:</label>
+    <input type="file" name="timage">
+    </br>
+    <input type="submit" value="create">
+    </br>
+</form>
+
+{%endblock%} {% endcomment %}

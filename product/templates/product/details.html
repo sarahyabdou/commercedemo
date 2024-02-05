@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block title %}Home - Skin Care Website{% endblock %}
 {% load static%}
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +21,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Details</th>
+                    <th>Image</th>
                     
                 </tr>
             </thead>
@@ -27,6 +30,9 @@
                     <td>{{ product.id }}</td>
                     <td>{{ product.name }}</td>
                     <td>{{ product.details }}</td>
+                    <td>
+                        <img  width="20%"src="{{product.getpimageurl}}"/>
+                    </td>
                   
                 </tr>
             </tbody>
