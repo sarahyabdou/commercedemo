@@ -1,28 +1,20 @@
 {% extends 'base.html' %}
 {% load static%}
-{%block title%}
-Update product
-{%endblock%}
+{% block title %}
+      update product
+        {% endblock %}
 
 {% block content %}
 <h3>
-    Update new product
+    update Product
 </h3>
-<form method="post">
+
+<form method="post" enctype="multipart/form-data">
      {% csrf_token %}
+     {{form}}
+    <input type="submit" value="Update Product">
+    </br>
     
-    <label>Name:</label>
-    <input type="text" name="tname" value={{product.name}}>
-     </br>
-  
-    <label>Details:</label>
-    <input type="text" name="tdetails" value={{product.details}}>
-    
-     </br>
-    
-     
-     <input type="submit" value="update">
-     </br>
 </form>
 <div style="color:red">
     {{msg}}
