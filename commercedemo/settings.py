@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'product.apps.ProductConfig',
     'category.apps.CategoryConfig',
-     'about.apps.AboutConfig'
+     'about.apps.AboutConfig',
+     'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,8 @@ ROOT_URLCONF = 'commercedemo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['product/templates/product/',
+        'DIRS': [BASE_DIR/'templates/',
+                 'product/templates/product/',
                  'category/templates/category/',
                   'about/templates/about/'],
         'APP_DIRS': True,

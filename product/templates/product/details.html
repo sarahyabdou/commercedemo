@@ -1,17 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}Home - Skin Care Website{% endblock %}
 {% load static%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Link to your CSS file -->
-</head>
-<body>
+
 
 {% block content %}
+  {{product}}
     <h1>Product Details</h1>
    
     <div class="table-responsive">
@@ -38,7 +31,4 @@
             </tbody>
         </table>
     </div>
-{% endblock %}
-
-</body>
-</html>
+ {% endblock %}

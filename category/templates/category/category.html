@@ -7,9 +7,9 @@
 {% block content %}
       <h1> Categories</h1>
      
-     {% comment %} <a href="{%url 'addcategory' %}">New category</a> {% endcomment %}
+     
      <button>
-     <a href="{%url 'addformcategory' %}">Add New Category </a>
+     <a href="{%url 'category.add' %}">Add New Category </a>
      </button>
     <div class="table-responsive">
         <table class="table">
@@ -42,16 +42,16 @@
                        
                        
                      <button>
-                     <a href="{%url 'category.details' category.id%}">details</a> 
+                     <a href="{%url 'details.category' category.id%}">details</a> 
                 
                      </button>
                 
                      <button>
-                     <a href="{%url 'category.update' category.id%}">update</a>
+                     <a href="{%url 'update.category' category.id%}">update</a>
                     </button> 
                     
                      <button>
-                     <a href="{%url 'category.delete' category.id%}">delete</a>
+                     <a href="{%url 'delete.category' category.id%}">delete</a>
                     </button> 
                      </br>
                     

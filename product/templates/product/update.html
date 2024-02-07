@@ -1,22 +1,21 @@
-{% extends 'base.html' %}
-{% load static%}
+
+{% extends 'product/base.html' %}
+
 {% block title %}
-      update product
-        {% endblock %}
+      Add Category
+      {% endblock %}
+{% load static%}
 
 {% block content %}
-<h3>
-    update Product
-</h3>
+<h1>
+    Update product
+</h1>
 
-<form method="post" enctype="multipart/form-data">
+<form method="post"enctype="multipart/form-data" >
      {% csrf_token %}
      {{form}}
-    <input type="submit" value="Update Product">
+    <input type="submit" value="update Product">
     </br>
-    
 </form>
-<div style="color:red">
-    {{msg}}
-</div>
+
 {%endblock%}

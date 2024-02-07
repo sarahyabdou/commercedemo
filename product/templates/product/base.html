@@ -28,7 +28,38 @@
                 </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                </li> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Register' %}">Register</a>
+                </li>  
+                {% if user.id%}
+                <li class="nav-item">
+                    <h3  style="color: white;">welcome    {{ user }}</h3>
+                </br>
+                </li>
+                
+                <li class="nav-item">
+                
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger" style="background-color: white; color: black;">Logout</button>
+                    </form>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+            {% endif %}
+
+        
+   
+            </ul>
+        </div>
+    </div>
+</nav>
+
+                    
+                 
                  
             </ul>
         </div>

@@ -1,10 +1,11 @@
-{% extends 'base.html' %}
+ {% extends 'base.html' %}
 {% load static%}
 {% block title %}
       details for  category
 {% endblock %}
 
 {% block content %}
+{{category}}
 
 
 
@@ -44,4 +45,20 @@
     </div>
 {% endblock %}
 
+ 
+ {% comment %} {% extends 'product/base.html' %}
 
+{% block title %}
+     details Category
+      {% endblock %}
+{% load static%}
+
+{% block content %}
+<h1>
+    Details for category
+</h1>
+     {{category}}
+   
+
+
+{%endblock%} {% endcomment %}

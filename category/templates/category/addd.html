@@ -1,0 +1,20 @@
+{% extends 'product/base.html' %}
+
+{% block title %}
+      Add Category
+      {% endblock %}
+{% load static%}
+
+{% block content %}
+<h1>
+    Add new category
+</h1>
+
+<form method="post" enctype="multipart/form-data" >
+     {% csrf_token %}
+     {{form}}
+    <input type="submit" value="Add new new Category">
+    </br>
+</form>
+
+{%endblock%}

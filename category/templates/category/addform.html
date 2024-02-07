@@ -1,13 +1,14 @@
-{% extends 'base.html' %}
-{% load static%}
+{% comment %} {% extends 'product/base.html' %}
+
 {% block title %}
-      add category
-        {% endblock %}
+      Add Category
+      {% endblock %}
+{% load static%}
 
 {% block content %}
-<h3>
+<h1>
     Add new category
-</h3>
+</h1>
 
 <form method="post" enctype="multipart/form-data">
      {% csrf_token %}
@@ -18,4 +19,4 @@
 <div style="color:red">
     {{msg}}
 </div>
-{%endblock%}
+{%endblock%} {% endcomment %}
