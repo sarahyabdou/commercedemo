@@ -20,8 +20,8 @@ class Product(models.Model):
     def products(self):
         pass
     
-    # def product_details(cls,id):
-    #     return cls.objects.get(id=id)
+    
+    
     @classmethod
     def getproductdetails(cls,id):
         return cls.objects.get(id=id)
@@ -30,7 +30,7 @@ class Product(models.Model):
     @classmethod
     def Getall(cls):
         return cls.objects.all()
-
+    
 
    
     # @classmethod

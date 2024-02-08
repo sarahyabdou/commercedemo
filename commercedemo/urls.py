@@ -28,7 +28,8 @@ urlpatterns = [
     
        path('category/',include('category.url')),
        path('about/',include('about.url')),
-       path('accounts/',include('accounts.url'))
+       path('accounts/',include('accounts.url')),
+        
     
        
     

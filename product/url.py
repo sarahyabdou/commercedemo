@@ -19,6 +19,7 @@ urlpatterns = [
          path('Delete/<int:pk>',login_required(ProductDeletegeneric.as_view()),name="product.delete"),
            path('Update/<int:pk>',login_required(ProductUpdategeneric.as_view()),name="product.update"),
      path('<int:pk>',ProductDetailgeneric.as_view(),name="product.details"),
+     path('API/',include('product.api.url'))
       #  path('Update<int:id>',views.productupdate,name="product.update"),
   
 ]
